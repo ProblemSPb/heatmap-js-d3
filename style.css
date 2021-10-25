@@ -25,3 +25,14 @@ h3 {
     min-width: 1200px;
     background-color: white;
 }
+
+#legend {
+    background-color: white;
+    min-width: 1200px;
+    height: 70px;
+    font-size: 12px;
+}
+
+#legend-container {
+    border: black 1px solid;
+}

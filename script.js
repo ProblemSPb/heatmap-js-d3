@@ -46,9 +46,9 @@ function drawCells () {
                 let variance = item['variance'];
 
                 if(variance <= -1) {
-                    return 'Blue'
+                    return 'SteelBlue'
                 } else if(variance <= 0) {
-                    return 'Lightblue'
+                    return 'LightSteelBlue'
                 } else if(variance <= 1) {
                     return 'Orange'
                 } else {
@@ -79,14 +79,11 @@ function drawCells () {
             .attr('x', (item) => {
                 return xScale(item['year'])
             })
-
-
-
 }
 
 function drawAxis () {
     let xAxis = d3.axisBottom(xScale)
-                    .tickFormat(d3.format('d'));
+                    .tickFormat(d3.format('d')); // d converts data into INT
 
     canvas.append('g')
             .call(xAxis)
@@ -110,7 +107,6 @@ req.onload = function () {
     let data = JSON.parse(req.response);
     baseTemp = data['baseTemperature'];
     values = data['monthlyVariance'];
-    console.log(baseTemp);
     console.log(values);
 
     generateScales();
