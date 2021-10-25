@@ -65,7 +65,7 @@ function drawCells () {
                 return baseTemp + item['variance'];
             })
             // height will be the height - 2x padding and devided into number of cells vertically
-            .attr('height', (height - (2 * padding))/12)
+            .attr('height', (height - (1.8 * padding))/12)
             // take the month from data, convert it into a Date, feed into yScale
             .attr('y', (item) => {
                 return yScale(new Date(0, item['month'] - 1, 0, 0, 0, 0, 0))
