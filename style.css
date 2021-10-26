@@ -36,3 +36,12 @@ h3 {
 #legend-container {
     border: black 1px solid;
 }
+
+#tooltip {
+    visibility: hidden;
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 130px;
+    top: 150px;
+}
